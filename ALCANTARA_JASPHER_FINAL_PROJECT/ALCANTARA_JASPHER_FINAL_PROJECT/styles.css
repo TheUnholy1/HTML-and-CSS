@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  display: flex;
+  background: linear-gradient(to right, #333, #666);
+  display: flex;
+  max-width: 80%;
+}
+
+nav {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  height: 100vh;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+nav li {
+  margin-bottom: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+  width: 160px;
+}
+
+nav a:hover {
+  background-color: #555;
+  border-bottom: 2px solid #fff;
+}
+
+section {
+  flex: 1;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #f4f4f7;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.8cm;
+}
+h3 {
+  color: #f4f4f7;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.2cm;
+}
+p {
+  color: #f4f4f7;
+  text-align: justify;
+  font-family: sans-serif;
+  font-size: 0.8cm;
+}
+
+.center-align {
+  text-align: center;
+}
+.small-paragraph {
+  font-size: 1.2em; /* Set the desired font size */
+  text-align: center;
+}
+
+.portfolio-item {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox to create a horizontal layout */
+  justify-content: space-between; /* Space items evenly along the main axis */
+}
+
+.portfolio-item img {
+  border-radius: 5px;
+  width: 500px;
+  height: 400px;
+  margin: 0 30px;
+}
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.text-content {
+  max-width: 60%; /* Adjust as needed */
+}
+
+.image-content {
+  max-width: 30%; /* Adjust as needed */
+}
+.about-section {
+  display: flex;
+}
+
+.profile-picture-container {
+  width: 200px; /* Set a fixed width for the profile picture container */
+  margin-right: 20px; /* Add some space between the picture and contact information */
+}
+
+.profile-picture {
+  width: 100%; /* Set the width to 100% to fill the container */
+  max-width: 100%; /* Ensure the picture doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+.resume-picture {
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+section {
+  padding: 2px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.service-item {
+  width: 30%; /* Set the width to control the number of items per row */
+  margin-bottom: 20px;
+}
+
+/* Adjust the width and height of the images as needed */
+.web_pic,
+.sof_pic,
+.database_pic {
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 30px 30px 20px; /* Adjust the margin as needed */
+}
+
+.zoom-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.zoom-container img {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-container img:hover {
+  transform: scale(1.2);
+}
+
+.portfolio-item {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex; /* Use flexbox to create a horizontal layout */
+  justify-content: space-between; /* Space items evenly along the main axis */
+}
+
+.portfolio-item img {
+  border-radius: 5px;
+  width: 500px;
+  height: 400px;
+  margin: 0 30px;
+}
+.zoom-container1 img {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.pindot{
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  font-size: 0.8cm;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.zoom-container1 img:hover {
+  transform: scale(1.2);
+}
+
+.zoom-container1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+}
+
+/* Add a modal for larger image view */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+  }
+}

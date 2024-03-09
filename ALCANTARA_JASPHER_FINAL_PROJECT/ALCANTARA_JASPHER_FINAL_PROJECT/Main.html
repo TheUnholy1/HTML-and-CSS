@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jaspher Alcantara</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="loadContent('Home')">Home</a></li>
+        <li><a href="#" onclick="loadContent('About')">About</a></li>
+        <li><a href="#" onclick="loadContent('Resume')">Resume</a></li>
+        <li><a href="#" onclick="loadContent('Portfolio')">Portfolio</a></li>
+        <li><a href="#" onclick="loadContent('Services')">Services</a></li>
+        <li><a href="#" onclick="loadContent('Prelim')">Prelim</a></li>
+        <li><a href="#" onclick="loadContent('Midterm')">Midterm</a></li>
+        <li><a href="#" onclick="loadContent('Finals')">Finals</a></li>
+      </ul>
+    </nav>
+    <section id="content">
+      <!-- Content will be dynamically loaded here -->
+    </section>
+
+    <script>
+      // Function to load content dynamically
+      function loadContent(page) {
+        const content = document.getElementById("content");
+
+        // Clear existing content
+        content.innerHTML = "";
+
+        // Add content based on the selected page
+        switch (page) {
+          case "Home":
+            content.innerHTML = `<h1>Lets make your dream into a reality</h1>
+                                         <p class="center-align"> Discover our creative services and explore our portfolio of exciting
+          projects.</p>
+          <h2>Featured Portfolio</h2>
+          <div class="zoom-container1">
+  <div class="portfolio-item" onclick="openModal('Images/1.png')">
+    <img src="Images/1.png" alt="Project in Java" />
+  </div>
+
+  <div class="portfolio-item" onclick="openModal('Images/2.png')">
+    <img src="Images/2.png" alt="Project 2" />
+  </div>
+</div>
+
+
+
+        <div id="myModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Modal Image">
+</div>
+
+        <button class="pindot" onclick="loadContent('Portfolio')">Explore Portfolio</button>;
+        `;
+
+            break;
+
+          case "About":
+            content.innerHTML = `
+              <div class="about-content">
+                <div class="text-content">
+                  <h2>About Me</h2>
+                  <p>
+                    I am Jaspher Alcantara a passionate web developer with a strong foundation in HTML, CSS,
+                    and JavaScript. Experienced in building responsive and user-friendly
+                    websites.
+                  </p>
+
+                  <p>
+                    In addition to my technical skills, I am dedicated to continuous
+                    learning and staying updated with the latest trends in web
+                    development. I thrive on challenges and enjoy solving problems to
+                    create innovative and effective solutions.
+                  </p>
+
+                  <p>
+                    Outside of coding, you can find me exploring new technologies, diving
+                    into a good book, or enjoying outdoor activities.
+                  </p>
+                  
+                </div>
+
+                <div class="image-content">
+                  <img
+                    src="Images/1x1_formal.jpg"
+                    alt="Profile Picture"
+                    class="profile-picture"
+                  />
+                </div>
+                
+              </div>
+            `;
+            break;
+          case "Resume":
+            content.innerHTML = `
+            <img
+        src="Images/1x1_formal.jpg"
+        alt="Profile Picture"
+        class="resume-picture"
+      />
+      <h1>Jaspher Alcantara</h1>
+      <p class="center-align">Fullstack Developer</p>
+
+      <section>
+      <h3>About Me</h3>
+      <p class="small-paragraph center-align">
+        I am a passionate web developer with a strong foundation in HTML, CSS,
+        and JavaScript. Experienced in building responsive and user-friendly
+        websites.
+      </p>
+
+      <h3>Education</h3>
+      <p class="small-paragraph center-align">
+        Bachelor of Science in Information Technology<br />City College of
+        Tagaytay, 2021 - Present
+      </p>
+      <p class="small-paragraph center-align">
+        Bachelor of Science in Civil Engineering <br />Lyceum of The Philippines
+        University Cavite, 2019-2021
+      </p>
+      <p class="small-paragraph center-align">
+        General Academics Strand <br />STI College Tagaytay, 2017-2019
+      </p>
+
+      <h3>Certificates</h3>
+      <p class="small-paragraph center-align">Google IT Support Professional Certificate (2023)</p>
+
+      <h3>Experience</h3>
+      <p class="small-paragraph center-align">
+        • Worked at City Government of Tagaytay, Assessor’s Office, as part of
+        Special Program for Employment of Students (SPES) (2023)
+      </p>
+      <p class="small-paragraph center-align">• 80 Hrs Work Immersion at Sunrise Holiday Mansion Hotel (2019)</p>
+    </section>
+
+            `;
+            break;
+
+          case "Portfolio":
+            content.innerHTML = `
+  <section>
+      <div>
+        <h2 class="Serbisyo">Projects</h2>
+
+        <div class="services-container zoom-container">
+          < <div class="service-item" onclick="openModal('Images/1.png')">
+            <img src="Images/1.png" alt="Java GUI" class="web_pic" />
+            <h3>Activities Compilation GUI</h3>
+          </div>
+
+          <div class="service-item" onclick="openModal('Images/2.png')">
+            <img
+              src="Images/2.png"
+              alt="Software Development"
+              class="sof_pic"
+            />
+            <h3>Gamebox GUI</h3>
+          </div>
+
+          <div class="service-item" onclick="openModal('Images/form_proj.png')">
+            <img
+              src="Images/form_proj.png"
+              alt="Database Management"
+              class="database_pic"
+            />
+            <h3>PBA Team Database Form</h3>
+          </div>
+
+          <div class="service-item" onclick="openModal('Images/5.png')">
+            <img src="Images/5.png" alt="Login Form" class="web_pic" />
+            <h3>MultiForm Login Manager in VB</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Images/6.png')">
+            <img src="Images/6.png" alt="Calculator GUI" class="web_pic" />
+            <h3>Calculator GUI</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Images/7.png')">
+            <img src="Images/7.png" alt="Maze game" class="web_pic" />
+            <h3>Maze Game</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Images/8.png')">
+            <img src="Images/8.png" alt="Wonder of the world" class="web_pic" />
+            <h3>Wonders of the World Explorer</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Images/9.png')">
+            <img src="Images/9.png" alt="fitness app" class="web_pic" />
+            <h3>Fitness App</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Images/3.png')">
+            <img src="Images/3.png" alt="Grading System Form" class="web_pic" />
+            <h3>Grading System Form</h3>
+          </div>
+
+          <div class="service-item" onclick="openModal('Images/4.png')">
+            <img
+              src="Images/4.png"
+              alt="Ordering System Form"
+              class="web_pic"
+            />
+            <h3>Ordering System Form</h3>
+          </div>
+        </div>
+
+        <h3>Contact Information</h3>
+        <p>Mobile Number: 09294323449</p>
+        <p>
+          For All Inquiries Contact Jaspher Alcantara at <br />
+          alcantarajaspher123@gmail.com
+        </p>
+
+        <a href="https://www.facebook.com/jaspher.alcantara.7" target="_blank"
+          >Facebook</a
+        ><br />
+        <a
+          href="https://www.linkedin.com/in/jaspher-alcantara-4b6559235/"
+          target="_blank"
+          >Linkedin</a
+        >
+      </div>
+      <div id="myModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Modal Image">
+</div>
+    </section>
+  `;
+            break;
+
+          case "Services":
+            content.innerHTML = `
+    <section>
+  <div>
+    <h2 class="Serbisyo">Services</h2>
+
+    <div class="services-container zoom-container">
+      <div class="service-item">
+        <img src="Images/web_dev.jpg" alt="Web Development" class="web_pic">
+        <p>Web Development</p>
+      </div>
+
+      <div class="service-item">
+        <img src="Images/software_pic.jpg" alt="Software Development" class="sof_pic">
+        <p>Software Development</p>
+      </div>
+
+      <div class="service-item2">
+        <img src="Images/database_img.jpg" alt="Database Management" class="database_pic">
+        <p>Database Management</p>
+      </div>
+    </div>
+
+    <h3>Contact Information</h3>
+    <p>Mobile Number: 09294323449</p>
+    <p>For All Inquiries Contact Jaspher Alcantara at <br /> alcantarajaspher123@gmail.com</p>
+
+    <a href="https://www.facebook.com/jaspher.alcantara.7" target="_blank">Facebook</a><br />
+    <a href="https://www.linkedin.com/in/jaspher-alcantara-4b6559235/" target="_blank">Linkedin</a>
+  </div>
+</section>
+  `;
+            break;
+          case "Prelim":
+            content.innerHTML = `<H1>Prelim Activities, Quizzes, Exam</H1>
+            <div class="services-container zoom-container">
+              <div class="service-item" onclick="openModal('Prelim/P4.png')">
+            <img src="Prelim/P4.png" alt="Prelim Quiz 1" class="web_pic" />
+            <h3>Prelim Quiz 1</h3>
+          </div>
+              <div class="service-item" onclick="openModal('Prelim/P1.png')">
+            <img src="Prelim/P1.png" alt="Prelim Act1" class="web_pic" />
+            <h3>Case Study</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Prelim/P2.png')">
+            <img src="Prelim/P2.png" alt="Prelim Quiz 2" class="web_pic" />
+            <h3>Prelim Quiz 2</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Prelim/P3.png')">
+            <img src="Prelim/P3.png" alt="Prelim Exam" class="web_pic" />
+            <h3>Prelim Exam</h3>
+          </div>
+          
+          <div class="service-item" onclick="openModal('Prelim/P5.png')">
+            <img src="Prelim/P5.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Prelim Lab Exam Case Study </h3>
+          </div>
+        </div>
+        <div id="myModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Modal Image">
+</div>
+            `;
+
+            break;
+          case "Midterm":
+            content.innerHTML = `<H1>Midterm Activities, Quizzes, Exam</H1>
+            <div class="services-container zoom-container">
+              <div class="service-item" onclick="openModal('Midterm/M1.png')">
+            <img src="Midterm/M1.png" alt="Prelim Act1" class="web_pic" />
+            <h3>Window Alert</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M2.png')">
+            <img src="Midterm/M2.png" alt="Prelim Quiz 2" class="web_pic" />
+            <h3>Console Log</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M3.png')">
+            <img src="Midterm/M3.png" alt="Prelim Exam" class="web_pic" />
+            <h3>Document Write</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M4.png')">
+            <img src="Midterm/M4.png" alt="Prelim Quiz 1" class="web_pic" />
+            <h3>Simple Log in</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M5.png')">
+            <img src="Midterm/M5.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Basic Calculator </h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M6.png')">
+            <img src="Midterm/M6.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Midterm Activity </h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M8.png')">
+            <img src="Midterm/M8.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Midterm Quiz 1 </h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M7.png')">
+            <img src="Midterm/M7.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Midterm Quiz 2 </h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M10.png')">
+            <img src="Midterm/M10.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Midterm Exam </h3>
+          </div>
+          <div class="service-item" onclick="openModal('Midterm/M9.png')">
+            <img src="Midterm/M9.png" alt="Prelim Lab Exam" class="web_pic" />
+            <h3>Midterm Lab Exam </h3>
+          </div>
+          
+        </div>
+        <div id="myModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Modal Image">
+</div>
+            `;
+
+            break;
+          case "Finals":
+            content.innerHTML = `<H1>Finals Activities, Quizzes, Exam</H1>
+            <div class="services-container zoom-container">
+              <div class="service-item" onclick="openModal('Finals/F1.png')">
+            <img src="Finals/F1.png" alt="Finals Act1" class="web_pic" />
+            <h3>Data Type Finder</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Finals/F2.png')">
+            <img src="Finals/F2.png" alt="Finals Quiz 1" class="web_pic" />
+            <h3>Finals Quiz 1</h3>
+          </div>
+          <div class="service-item" onclick="openModal('Finals/F3.png')">
+            <img src="Finals/F3.png" alt="Finals Quiz 2" class="web_pic" />
+            <h3>Finals Quiz 2</h3>
+          </div>
+          
+        </div>
+        <div id="myModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Modal Image">
+</div>
+            `;
+
+            break;
+          default:
+            break;
+        }
+      }
+      loadContent("Home");
+
+      function openModal(imageSrc) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImg");
+        modalImg.src = imageSrc;
+        modal.style.display = "flex";
+      }
+
+      function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
