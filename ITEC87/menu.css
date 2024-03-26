@@ -1,0 +1,63 @@
+/* Basic reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  text-align: center;
+}
+/*set color ng body*/
+body {
+  background-color: #282828;
+  color: white;
+}
+
+/* Styling the navigation bar */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/* Styling the main content sections */
+section {
+  padding: 50px 0;
+  text-align: center;
+  scroll-margin-top: 70px; /* Adjust for header height */
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
