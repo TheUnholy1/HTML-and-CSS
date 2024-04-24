@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+    <link rel="stylesheet" href="menu.css" />
+    <style>
+      /* Additional styles for the total */
+      #total-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      /* Styling for the receipt list and change display */
+      .receipt-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      #change {
+        margin-top: 10px;
+      }
+      #calculate-change-button {
+        margin-top: 40px; /* Adjust the value as needed */
+        height: 50px;
+        width: 160px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1 align="center" class="title">KING INASAL</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#main-dish">Main Dish</a></li>
+          <li><a href="#vegetable">Vegetable</a></li>
+          <li><a href="#dessert">Dessert</a></li>
+          <li><a href="#drinks">Drinks</a></li>
+          <li><a href="#add-ons">Add-ons</a></li>
+          <li><a href="#total-container">Payment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content sections -->
+    <section id="main-dish">
+      <h2>Main Dish</h2>
+      <div class="menu-items-wrapper" id="main-dish-items">
+        <div class="menu-item">
+          <input type="checkbox" id="main-dish-item-1" class="item-checkbox" />
+          <label for="main-dish-item-1">
+            <img src="Images/M1.png" alt="Main Dish 1" />
+            <h3>Chicken Inasal Regular Family Size</h3>
+            <p>500.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="main-dish-item-2" class="item-checkbox" />
+          <label for="main-dish-item-2">
+            <img src="Images/M2.png" alt="Main Dish 2" />
+            <h3>Paa Large Family Size</h3>
+            <p>750.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="main-dish-item-3" class="item-checkbox" />
+          <label for="main-dish-item-3">
+            <img src="Images/M3.png" alt="Main Dish 3" />
+            <h3>Paa Large PM1</h3>
+            <p>140.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="main-dish-item-4" class="item-checkbox" />
+          <label for="main-dish-item-4">
+            <img src="Images/M4.png" alt="Main Dish 4" />
+            <h3>Pecho Large PM2</h3>
+            <p>180.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="main-dish-item-5" class="item-checkbox" />
+          <label for="main-dish-item-5">
+            <img src="Images/M5.png" alt="Main Dish 5" />
+            <h3>Palabok</h3>
+            <p>150.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="vegetable">
+      <h2>Vegetable</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input type="checkbox" id="vegie-1" class="item-checkbox" />
+          <label for="vegie-1">
+            <img src="Images/V1.jpg" alt="Vegetable 1" />
+            <h3>Laing</h3>
+            <p>30.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="vegie-2" class="item-checkbox" />
+          <label for="vegie-2">
+            <img src="Images/V2.jpg" alt="Vegetable 2" />
+            <h3>Ginataang Langka</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="vegie-3" class="item-checkbox" />
+          <label for="vegie-3">
+            <img src="Images/V3.jpg" alt="Vegetable 3" />
+            <h3>Ensaladang Talong</h3>
+            <p>80.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="dessert">
+      <h2>Dessert</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input type="checkbox" id="dessert-1" class="item-checkbox" />
+          <label for="dessert-1">
+            <img src="Images/D1.png" alt="dessert 1" />
+            <h3>Halo Halo</h3>
+            <p>100.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="dessert-2" class="item-checkbox" />
+          <label for="dessert-2">
+            <img src="Images/D2.png" alt="dessert 2" />
+            <h3>Crema De Leche Halo Halo</h3>
+            <p>100.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="dessert-3" class="item-checkbox" />
+          <label for="dessert-3">
+            <img src="Images/D3.png" alt="dessert 3" />
+            <h3>Chicken Empanada</h3>
+            <p>100.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="drinks">
+      <h2>Drinks</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input type="checkbox" id="drinks-1" class="item-checkbox" />
+          <label for="drinks-1">
+            <img src="Images/DR1.jpg" alt="drinks 1" />
+            <h3>Coke</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="drinks-2" class="item-checkbox" />
+          <label for="drinks-2">
+            <img src="Images/DR2.jpeg" alt="drinks 2" />
+            <h3>ICED TEA</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="drinks-3" class="item-checkbox" />
+          <label for="drinks-3">
+            <img src="Images/DR3.jpg" alt="drinks 3" />
+            <h3>Sprite</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="add-ons">
+      <h2>Add-ons</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input type="checkbox" id="add-ons-1" class="item-checkbox" />
+          <label for="add-ons-1">
+            <img src="Images/ADD1.jpg" alt="add-ons 1" />
+            <h3>Chicken Oil</h3>
+            <p>20.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="add-ons-2" class="item-checkbox" />
+          <label for="add-ons-2">
+            <img src="Images/ADD2.jpg" alt="add-ons 2" />
+            <h3>Rice</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input type="checkbox" id="add-ons-3" class="item-checkbox" />
+          <label for="add-ons-3">
+            <img src="Images/ADD3.jpg" alt="add-ons 3" />
+            <h3>Garlic Rice</h3>
+            <p>50.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="total-container">
+      <h2>Payment</h2>
+      <div>
+        <p id="total">Total: ₱0.00</p>
+        <ul class="receipt-list"></ul>
+        <label for="money">Amount Given (₱):</label>
+        <input type="number" id="money" placeholder="Enter amount given" />
+        <button id="calculate-change-button">Calculate Change</button>
+        <p id="change">Change: ₱0.00</p>
+      </div>
+    </section>
+
+    <!-- Script for handling checkboxes and calculating total -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const checkboxes = document.querySelectorAll(".item-checkbox");
+        const receiptList = document.querySelector(".receipt-list");
+        const totalDisplay = document.getElementById("total");
+        const changeDisplay = document.getElementById("change");
+        let total = 0;
+
+        checkboxes.forEach((checkbox) => {
+          checkbox.addEventListener("change", function () {
+            const item = checkbox.closest(".menu-item");
+            const itemName = item.querySelector("h3").innerText;
+            const itemPrice = parseFloat(item.querySelector("p").innerText);
+            const quantityInput = item.querySelector(".quantity-input");
+            const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+
+            if (checkbox.checked) {
+              const totalItemPrice = itemPrice * quantity;
+              total += totalItemPrice;
+
+              // Create a list item for the receipt
+              const listItem = document.createElement("li");
+              listItem.innerText = `${itemName} - ₱${totalItemPrice.toFixed(
+                2
+              )} (Quantity: ${quantity})`;
+              listItem.dataset.itemName = itemName;
+              receiptList.appendChild(listItem);
+            } else {
+              const totalItemPrice = itemPrice * quantity;
+              total -= totalItemPrice;
+
+              // Find and remove the corresponding list item from the receipt
+              const items = receiptList.querySelectorAll("li");
+              items.forEach((li) => {
+                if (li.dataset.itemName === itemName) {
+                  receiptList.removeChild(li);
+                }
+              });
+            }
+
+            totalDisplay.textContent = `Total: ₱${total.toFixed(2)}`;
+          });
+        });
+
+        // Add an event listener to calculate change when the button is clicked
+        const calculateChangeButton = document.getElementById(
+          "calculate-change-button"
+        );
+        calculateChangeButton.addEventListener("click", calculateChange);
+
+        function calculateChange() {
+          const moneyInput = document.getElementById("money");
+          const money = parseFloat(moneyInput.value);
+          const change = money - total;
+          changeDisplay.textContent = `Change: ₱${change.toFixed(2)}`;
+        }
+      });
+    </script>
+  </body>
+</html>

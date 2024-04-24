@@ -1,0 +1,135 @@
+/* Basic reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the navigation bar */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/* Styling the main content sections */
+section {
+  padding: 80px 0 50px; /* Updated padding to create space at the top */
+  text-align: center;
+  scroll-margin-top: 70px; /* Adjust for header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center align the heading */
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item {
+  flex: 0 0 30%; /* Adjusted width to fit 5 items per row */
+  margin: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item h3,
+p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+}
+body {
+  background-color: #282828; /* Change this to the desired background color */
+  color: white;
+}
+
+/* Styling the quantity input field */
+.quantity-input {
+  margin-left: 5px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+input {
+  width: 20px;
+  height: 30px;
+  padding: 3px;
+  margin: 3px;
+  vertical-align: bottom;
+  position: relative;
+  top: -5px;
+  *overflow: hidden;
+  cursor: pointer;
+}
+
+#total {
+  cursor: pointer;
+  height: 50px;
+  width: 160px;
+}
+#money {
+  height: 50px;
+  width: 160px;
+  align-items: center;
+  padding-bottom: 2px;
+}

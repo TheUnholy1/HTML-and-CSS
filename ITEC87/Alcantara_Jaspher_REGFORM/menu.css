@@ -1,0 +1,99 @@
+/* Basic reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling the navigation bar */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+/* Styling the main content sections */
+/* Styling the main content sections */
+section {
+  padding: 100px 0px 0px; /* Updated padding to create space at the top */
+  text-align: center;
+  scroll-margin-top: 70px; /* Adjust for header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center align the heading */
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+.menu-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.menu-item {
+  flex: 10 10 10%;
+  margin: 10px;
+  text-align: center;
+  position: relative; /* Ensure the zoom effect is contained within the menu item */
+  overflow: hidden; /* Hide any overflow to prevent unwanted scrolling */
+}
+
+.menu-item h3,
+p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.menu-item img {
+  width: 250px;
+  height: 250px;
+  transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+}
+/* set color of body */
+body {
+  background-color: #282828; /* Change this to the desired background color */
+  color: white;
+}
