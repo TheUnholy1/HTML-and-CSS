@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luzon Threads</title>
+    <link rel="stylesheet" href="menu.css" />
+    <style>
+      /* Additional styles for the total */
+      #total-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      /* Styling for the receipt list and change display */
+      .receipt-list {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+
+      #change {
+        margin-top: 10px;
+      }
+      #calculate-change-button {
+        margin-top: 40px; /* Adjust the value as needed */
+        height: 50px;
+        width: 160px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <h1 align="center" class="title">
+          <img
+            src="Images/logo.png"
+            alt="Luzon Threads Logo"
+            style="width: 100px; height: auto"
+          />
+          LUZON THREADS
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#jeans">Jeans</a></li>
+          <li><a href="#shirts">Shirts</a></li>
+          <li><a href="#accessories">Accessories</a></li>
+          <li><a href="#fragrances">Fragrances</a></li>
+          <li><a href="#sando">Sando</a></li>
+          <li><a href="#toys">Toys</a></li>
+
+          <li><a href="#total-container">Payment</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content sections -->
+    <section id="jeans">
+      <h1>Jeans</h1>
+      <div class="menu-items-wrapper" id="main-dish-items">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-1"
+            class="item-checkbox"
+            data-default-quantity="44"
+          />
+          <label for="main-dish-item-1">
+            <img src="Images/skinny_jeans.jpg" alt="skinny_jeans" />
+            <h3>Skinny Jeans Men</h3>
+            <p>999.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-2"
+            class="item-checkbox"
+            data-default-quantity="33"
+          />
+          <label for="main-dish-item-2">
+            <img src="Images/slimfit_jeans.jpg" alt="slimfit_jeans" />
+            <h3>Slimfit Jeans Men</h3>
+            <p>1000</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-3"
+            class="item-checkbox"
+            data-default-quantity="66"
+          />
+          <label for="main-dish-item-3">
+            <img src="Images/widefit_jeans.jpg" alt="widefit_jeans" />
+            <h3>Wide Fit Jeans Men</h3>
+            <p>1200</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-4"
+            class="item-checkbox"
+            data-default-quantity="77"
+          />
+          <label for="main-dish-item-4">
+            <img src="Images/ripped_men.jpg" alt=ripped_men" />
+            <h3>Ripped Jeans Men</h3>
+            <p>1100</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-5"
+            class="item-checkbox"
+            data-default-quantity="87"
+          />
+          <label for="main-dish-item-5">
+            <img src="Images/ripped_women.jpg" alt="ripped_women" />
+            <h3>Ripped Jeans Women</h3>
+            <p>1100</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="main-dish-item-5"
+            class="item-checkbox"
+            data-default-quantity="22"
+          />
+          <label for="main-dish-item-5">
+            <img src="Images/chino.jpg" alt="chino-men" />
+            <h3>Chino Pants Men</h3>
+            <p>1100</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="shirts">
+      <h2>Shirts</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-1"
+            class="item-checkbox"
+            data-default-quantity="19"
+          />
+          <label for="vegie-1">
+            <img src="Images/white_shirt.jpg" alt="white" />
+            <h3>Plain White Shirt Unisex</h3>
+            <p>399</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-2"
+            class="item-checkbox"
+            data-default-quantity="20"
+          />
+          <label for="vegie-2">
+            <img src="Images/black_shirt.jpg" alt="black" />
+            <h3>Plain Black Shirt Unisex</h3>
+            <p>399</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-3"
+            class="item-checkbox"
+            data-default-quantity="8"
+          />
+          <label for="vegie-3">
+            <img src="Images/barong.jpg" alt="barong" />
+            <h3>Barong Tagalog</h3>
+            <p>2999</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-3"
+            class="item-checkbox"
+            data-default-quantity="57"
+          />
+          <label for="vegie-3">
+            <img src="Images/polo_white.png" alt="polo_white" />
+            <h3>Polo Shirt White Men</h3>
+            <p>499</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-3"
+            class="item-checkbox"
+            data-default-quantity="71"
+          />
+          <label for="vegie-3">
+            <img src="Images/black_polo.jpg" alt="blk-polo" />
+            <h3>Polo Shirt Black Men</h3>
+            <p>499</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="vegie-3"
+            class="item-checkbox"
+            data-default-quantity="44"
+          />
+          <label for="vegie-3">
+            <img src="Images/hoodie_black.jpg" alt="blk-hood" />
+            <h3>Plain Black Hoodie Unisex</h3>
+            <p>899</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="accessories">
+      <h2>Accessories</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="dessert-1"
+            class="item-checkbox"
+            data-default-quantity="11"
+          />
+          <label for="dessert-1">
+            <img src="Images/blk_unisex.jpg" alt="blk_unisex" />
+            <h3>Black Bag Unisex</h3>
+            <p>350</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="dessert-2"
+            class="item-checkbox"
+            data-default-quantity="7"
+          />
+          <label for="dessert-2">
+            <img src="Images/bag__blck.jpg" alt="blk_bg" />
+            <h3>Black Bag Men</h3>
+            <p>299</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="dessert-3"
+            class="item-checkbox"
+            data-default-quantity="8"
+          />
+          <label for="dessert-3">
+            <img src="Images/blk_cap.jpg" alt="cap_uni" />
+            <h3>Black Cap Unisex</h3>
+            <p>200.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="dessert-3"
+            class="item-checkbox"
+            data-default-quantity="3"
+          />
+          <label for="dessert-3">
+            <img src="Images/wht_cap.jpg" alt="cap_uni_white" />
+            <h3>White Cap Unisex</h3>
+            <p>200.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="dessert-3"
+            class="item-checkbox"
+            data-default-quantity="9"
+          />
+          <label for="dessert-3">
+            <img src="Images/brown-cap.jpg" alt="cap_uni_brown" />
+            <h3>Brown Cap Unisex</h3>
+            <p>200.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="fragrances">
+      <h2>Fragrances</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-1"
+            class="item-checkbox"
+            data-default-quantity="25"
+          />
+          <label for="drinks-1">
+            <img src="Images/versace.jpg" alt="versace" />
+            <h3>Versace Eros</h3>
+            <p>5000.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-2"
+            class="item-checkbox"
+            data-default-quantity="12"
+          />
+          <label for="drinks-2">
+            <img src="Images/ck1.jpg" alt="ck1" />
+            <h3>Calvin Klein CK1</h3>
+            <p>6000</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="15"
+          />
+          <label for="drinks-3">
+            <img src="Images/nautica.jpg" alt="nautica" />
+            <h3>Nautica Voyage</h3>
+            <p>3000</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="21"
+          />
+          <label for="drinks-3">
+            <img src="Images/aficionado.jpeg" alt="aff" />
+            <h3>Aficionado</h3>
+            <p>300</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="sando">
+      <h2>Sando</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-1"
+            class="item-checkbox"
+            data-default-quantity="87"
+          />
+          <label for="drinks-1">
+            <img src="Images/white_sando.jpg" alt="wht_snd" />
+            <h3>White Sando Men</h3>
+            <p>200.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-2"
+            class="item-checkbox"
+            data-default-quantity="50"
+          />
+          <label for="drinks-2">
+            <img src="Images/blk_sando.jpg" alt="blk_snd" />
+            <h3>Black Sando Men</h3>
+            <p>200</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="27"
+          />
+          <label for="drinks-3">
+            <img src="Images/muscle tee.jpg" alt="mcl_tee" />
+            <h3>Muscle Tee Men</h3>
+            <p>300</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="33"
+          />
+          <label for="drinks-3">
+            <img src="Images/athletic_sando.jpg" alt="athl_tee" />
+            <h3>Athletic Sando Men</h3>
+            <p>300</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="toys">
+      <h2>Toys</h2>
+      <div class="menu-items-wrapper">
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-1"
+            class="item-checkbox"
+            data-default-quantity="25"
+          />
+          <label for="drinks-1">
+            <img src="Images/fidget.jpg" alt="fdgt" />
+            <h3>Fidget Spinner</h3>
+            <p>100.00</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-2"
+            class="item-checkbox"
+            data-default-quantity="8"
+          />
+          <label for="drinks-2">
+            <img src="Images/skate.jpg" alt="skt" />
+            <h3>Mini Skateboard</h3>
+            <p>150</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="12"
+          />
+          <label for="drinks-3">
+            <img src="Images/mini_soldier.jpg" alt="soldier" />
+            <h3>Mini Soldier</h3>
+            <p>199</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+        <div class="menu-item">
+          <input
+            type="checkbox"
+            id="drinks-3"
+            class="item-checkbox"
+            data-default-quantity="2"
+          />
+          <label for="drinks-3">
+            <img src="Images/nerf.png" alt="nerf" />
+            <h3>Nerf Gun</h3>
+            <p>3000</p>
+          </label>
+          <input
+            type="number"
+            min="1"
+            max="99"
+            value="1"
+            class="quantity-input"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="total-container">
+      <h2>Payment</h2>
+      <div>
+        <p id="total">Total: ₱0.00</p>
+        <ul class="receipt-list"></ul>
+        <label for="money">Amount Given (₱):</label>
+        <input type="number" id="money" placeholder="Enter amount given" />
+        <button id="calculate-change-button">Calculate Change</button>
+        <p id="change">Change: ₱0.00</p>
+      </div>
+    </section>
+
+    <!-- Back to Top button -->
+    <button
+      class="back-to-top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+    >
+      Back to Top
+    </button>
+
+    <!-- Script for handling checkboxes and calculating total -->
+    <script src="script.js"></script>
+  </body>
+</html>

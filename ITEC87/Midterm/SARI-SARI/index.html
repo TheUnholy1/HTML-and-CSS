@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzon Threads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #686868;
+        }
+        h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+        h1 img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        table {
+            width: 80%;
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            background-color: #282828;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        caption {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+        }
+        #summary {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #closing-button {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4c5055;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input[type="number"] {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        /* Resize item images */
+        .item-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Store Logo and Name -->
+<h1><img src="logo.png" alt="Store Logo" class="item-img"> Luzon Threads</h1>
+
+<!-- Item Lists -->
+<table class="item-list" id="jeans">
+    <caption>Jeans</caption>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price (PHP)</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Populate with Jeans items -->
+        <tr>
+            <td><img src="jeans-slim.jpg" alt="Jeans 1" class="item-img"> Slim Fit Jeans</td>
+            <td>800</td>
+            <td><span id="stock-jeans1">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-jeans1"></td>
+            <td class="button-container">
+                <button onclick="buy('jeans1', 800)">Buy</button>
+                <button onclick="restock('jeans1')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('jeans1')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="jeans-ripped.jpeg" alt="Jeans 2" class="item-img"> Ripped Denim Jeans</td>
+            <td>950</td>
+            <td><span id="stock-jeans2">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-jeans2"></td>
+            <td class="button-container">
+                <button onclick="buy('jeans2', 950)">Buy</button>
+                <button onclick="restock('jeans2')">Restock</button>
+                
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('jeans2')">Remove Stock</button>
+            </td>
+  
+        </tr>
+        <tr>
+            <td><img src="jeans-waisted.jpg" alt="Jeans 3" class="item-img"> High-Waisted Jeans</td>
+            <td>750</td>
+            <td><span id="stock-jeans3">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-jeans3"></td>
+            <td class="button-container">
+                <button onclick="buy('jeans3', 750)">Buy</button>
+                <button onclick="restock('jeans3')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('jeans3')">Remove Stock</button>
+            </td>
+  
+        </tr>
+        <tr>
+            <td><img src="chino.jpg" alt="Jeans 4" class="item-img"> Chino</td>
+            <td>1080</td>
+            <td><span id="stock-jeans4">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-jeans4"></td>
+            <td class="button-container">
+                <button onclick="buy('jeans4', 1080)">Buy</button>
+                <button onclick="restock('jeans4')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('jeans4')">Remove Stock</button>
+            </td>
+  
+        </tr>
+    </tbody>
+</table>
+
+<!-- T-shirts -->
+<table class="item-list" id="tshirts">
+    <caption>T-shirts</caption>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price (PHP)</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Populate with T-shirts items -->
+        <tr>
+            <td><img src="tshirt-plain.jpg" alt="T-shirt 1" class="item-img"> Plain White T-shirt</td>
+            <td>300</td>
+            <td><span id="stock-tshirt1">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-tshirt1"></td>
+            <td class="button-container">
+                <button onclick="buy('tshirt1', 300)">Buy</button>
+                <button onclick="restock('tshirt1')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('tshirt1')">Remove Stock</button>
+            </td>
+  
+        </tr>
+        <tr>
+            <td><img src="tshirt-graphic.jpg" alt="T-shirt 2" class="item-img"> Graphic Print T-shirt</td>
+            <td>350</td>
+            <td><span id="stock-tshirt2">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-tshirt2"></td>
+            <td class="button-container">
+                <button onclick="buy('tshirt2', 350)">Buy</button>
+                <button onclick="restock('tshirt2')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('tshirt2')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="tshirt-stripped.jpg" alt="T-shirt 3" class="item-img"> Stripped Polo Shirt</td>
+            <td>450</td>
+            <td><span id="stock-tshirt3">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-tshirt3"></td>
+            <td class="button-container">
+                <button onclick="buy('tshirt3', 450)">Buy</button>
+                <button onclick="restock('tshirt3')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('tshirt3')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="tshirt-vneck.jpg" alt="T-shirt 4" class="item-img" > V-neck T-shirt</td>
+            <td>320</td>
+            <td><span id="stock-tshirt4">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-tshirt4"></td>
+            <td class="button-container">
+                <button onclick="buy('tshirt4', 320)">Buy</button>
+                <button onclick="restock('tshirt4')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('tshirt4')">Remove Stock</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<!-- Perfumes -->
+<table class="item-list" id="perfumes">
+    <caption>Perfumes</caption>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price (PHP)</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Populate with Perfumes items -->
+        <tr>
+            <td><img src="perfume-eu.jpg" alt="Perfume 1" class="item-img"> Eau de Parfum</td>
+            <td>1200</td>
+            <td><span id="stock-perfume1">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-perfume1"></td>
+            <td class="button-container">
+                <button onclick="buy('perfume1', 1200)">Buy</button>
+                <button onclick="restock('perfume1')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('perfume1')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="perfume-flo.jpg" alt="Perfume 2" class="item-img"> Floral Fragrance</td>
+            <td>950</td>
+            <td><span id="stock-perfume2">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-perfume2"></td>
+            <td class="button-container">
+                <button onclick="buy('perfume2', 950)">Buy</button>
+                <button onclick="restock('perfume2')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('perfume2')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="perfume-wo.jpg" alt="Perfume 3" class="item-img"> Woody Musk Perfume</td>
+            <td>800</td>
+            <td><span id="stock-perfume3">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-perfume3"></td>
+            <td class="button-container">
+                <button onclick="buy('perfume3', 800)">Buy</button>
+                <button onclick="restock('perfume3')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('perfume3')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="perfume-cit.jpg" alt="Perfume 4" class="item-img"> Citrus Cologne</td>
+            <td>600</td>
+            <td><span id="stock-perfume4">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-perfume4"></td>
+            <td class="button-container">
+                <button onclick="buy('perfume4', 600)">Buy</button>
+                <button onclick="restock('perfume4')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('perfume4')">Remove Stock</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<!-- Sandos -->
+<table class="item-list" id="sandos">
+    <caption>Sandos</caption>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price (PHP)</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Populate with Sandos items -->
+        <tr>
+            <td><img src="white_sando.jpg" alt="Sando 1" class="item-img"> Plain White Sando</td>
+            <td>150</td>
+            <td><span id="stock-sando1">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-sando1"></td>
+            <td class="button-container">
+                <button onclick="buy('sando1', 150)">Buy</button>
+                <button onclick="restock('sando1')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('sando1')">Remove Stock</button>
+            </td>
+
+        </tr>
+        <tr>
+            <td><img src="blk_sando.jpg" alt="Sando 2" class="item-img"> Black Sando</td>
+            <td>180</td>
+            <td><span id="stock-sando2">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-sando2"></td>
+            <td class="button-container">
+                <button onclick="buy('sando2', 180)">Buy</button>
+                <button onclick="restock('sando2')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('sando2')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="muscle tee.jpg" alt="Sando 3" class="item-img"> Muscle Tee</td>
+            <td>200</td>
+            <td><span id="stock-sando3">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-sando3"></td>
+            <td class="button-container">
+                <button onclick="buy('sando3', 200)">Buy</button>
+                <button onclick="restock('sando3')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('sando3')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="athletic_sando.jpg" alt="Sando 4" class="item-img"> Athletic Sando</td>
+            <td>220</td>
+            <td><span id="stock-sando4">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-sando4"></td>
+            <td class="button-container">
+                <button onclick="buy('sando4', 220)">Buy</button>
+                <button onclick="restock('sando4')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('sando4')">Remove Stock</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Toys -->
+<table class="item-list" id="toys">
+    <caption>Toys</caption>
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Price (PHP)</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Populate with Toys items -->
+        <tr>
+            <td><img src="toys-stuffed" alt="Toy 1" class="item-img"> Stuffed Bear</td>
+            <td>250</td>
+            <td><span id="stock-toy1">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-toy1"></td>
+            <td class="button-container">
+                <button onclick="buy('toy1', 250)">Buy</button>
+                <button onclick="restock('toy1')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('toy1')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="toys-blocks.jpg" alt="Toy 2" class="item-img"> Building Blocks Set</td>
+            <td>350</td>
+            <td><span id="stock-toy2">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-toy2"></td>
+            <td class="button-container">
+                <button onclick="buy('toy2', 350)">Buy</button>
+                <button onclick="restock('toy2')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('toy1')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="toys-dollhouse.jpg" alt="Toy 3" class="item-img"> Dollhouse</td>
+            <td>800</td>
+            <td><span id="stock-toy3">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-toy3"></td>
+            <td class="button-container">
+                <button onclick="buy('toy3', 800)">Buy</button>
+                <button onclick="restock('toy3')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('toy1')">Remove Stock</button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="nerf.png" alt="Toy 4" class="item-img"> Nerf Gun</td>
+            <td>3000</td>
+            <td><span id="stock-toy4">10</span></td>
+            <td><input type="number" min="0" max="10" value="0" id="quantity-toy4"></td>
+            <td class="button-container">
+                <button onclick="buy('toy4', 3000)">Buy</button>
+                <button onclick="restock('toy4')">Restock</button>
+            </td>
+            <td class="button-container">
+                <button onclick="removeStock('toy1')">Remove Stock</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Summary -->
+<div id="summary">
+    <h2>Selected Items:</h2>
+    <ul id="selected-items">
+        <!-- Selected items will be displayed here -->
+    </ul>
+    <p>Total Amount: <span id="total-amount">0</span> PHP</p>
+    <label for="amount-given">Amount Given (PHP):</label>
+    <input type="number" id="amount-given" min="0" step="0.01" onchange="calculateChange()">
+    <br>
+    Change: <span id="change">0</span> PHP
+</div>
+
+<!-- Closing Button -->
+<div id="closing-button">
+    <button onclick="confirmClose()">Close Shopping</button>
+</div>
+
+<!-- JavaScript -->
+<script>
+    let selectedItems = {}; // Object to store selected items and quantities
+
+    function buy(item, price) {
+        const quantityInput = document.getElementById(`quantity-${item}`);
+        const quantity = parseInt(quantityInput.value);
+        const stockElement = document.getElementById(`stock-${item}`);
+        let stock = parseInt(stockElement.textContent);
+
+        if (quantity > 0 && quantity <= stock) {
+            // Update selectedItems object with the selected item and quantity
+            if (selectedItems[item]) {
+                selectedItems[item] += quantity;
+            } else {
+                selectedItems[item] = quantity;
+            }
+
+            // Update summary
+            updateSummary();
+
+            // Calculate total amount
+            const totalAmountElement = document.getElementById('total-amount');
+            let currentTotalAmount = parseFloat(totalAmountElement.textContent);
+            currentTotalAmount += quantity * price;
+            totalAmountElement.textContent = currentTotalAmount.toFixed(2);
+
+            // Update stock
+            stock -= quantity;
+            stockElement.textContent = stock;
+
+            // Reset quantity input
+            quantityInput.value = 0;
+
+            alert(`You bought ${quantity} of ${item} at ${price} PHP each!`);
+        } else {
+            alert(`Invalid quantity. Please enter a valid amount.`);
+        }
+    }
+
+    function restock(item) {
+        const stockElement = document.getElementById(`stock-${item}`);
+        let stock = parseInt(stockElement.textContent);
+
+        // Restock 10 units
+        const restockQuantity = 10;
+        stock += restockQuantity;
+        stockElement.textContent = stock;
+
+        alert(`Restocked ${restockQuantity} of ${item}`);
+    }
+function removeStock(item){
+    {
+        const stockElement = document.getElementById(`stock-${item}`);
+        let stock = parseInt(stockElement.textContent);
+
+        // Remove stock 10 units
+        const restockQuantity = 10;
+        stock -= restockQuantity;
+        stockElement.textContent = stock;
+
+        alert(`Removed stock ${restockQuantity} of ${item}`);
+    }
+}
+    function updateSummary() {
+        const summaryList = document.getElementById('selected-items');
+        summaryList.innerHTML = ''; // Clear previous items
+
+        for (const item in selectedItems) {
+            const quantity = selectedItems[item];
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item}: ${quantity}`;
+            summaryList.appendChild(listItem);
+        }
+    }
+
+    function calculateChange() {
+        const totalAmount = parseFloat(document.getElementById('total-amount').textContent);
+        const amountGiven = parseFloat(document.getElementById('amount-given').value);
+
+        const change = amountGiven - totalAmount;
+        document.getElementById('change').textContent = change.toFixed(2);
+    }
+
+    function confirmClose() {
+        const confirmMessage = "Are you done shopping?";
+        if (confirm(confirmMessage)) {
+            alert("Thank you for shopping!");
+            window.close(); // Close the window
+        } else {
+            alert("Continue shopping!");
+        }
+    }
+</script>
+
+</body>
+</html>
