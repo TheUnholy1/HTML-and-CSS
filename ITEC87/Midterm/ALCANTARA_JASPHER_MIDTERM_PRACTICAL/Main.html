@@ -4,123 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Luzon Threads</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-        background-color: #333333;
-      }
-      h1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 20px;
-        color: White;
-      }
-      h1 img {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
-      }
-      nav {
-        background-color: #444;
-        color: white;
-        padding: 10px 0;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1000;
-      }
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 0 15px;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-      }
-      nav ul li a:hover {
-        text-decoration: underline;
-        color: green;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      table {
-        width: 80%;
-        margin: 0 auto 20px;
-        border-collapse: collapse;
-        background-color: #fff;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      th,
-      td {
-        padding: 10px;
-        border: 1px solid #ddd;
-      }
-      caption {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        color: White;
-      }
-      .button-container {
-        display: flex;
-        justify-content: space-around;
-      }
-      #summary {
-        margin-top: 20px;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      #closing-button {
-        margin-top: 20px;
-      }
-      button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: green;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: #0056b3;
-      }
-      input[type="number"] {
-        width: 60px;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        text-align: center;
-      }
-      input[type="number"]:focus {
-        outline: none;
-        border-color: #007bff;
-      }
-      /* Resize item images */
-      .item-img {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 4px;
-        margin-right: 10px;
-        color: White;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
@@ -158,8 +42,8 @@
         <!-- Populate with Jeans items -->
         <tr>
           <td>
-            <img src="images/slimfit.jpg" alt="Jeans 1" class="item-img" /> Slim Fit
-            Jeans
+            <img src="images/slimfit.jpg" alt="Jeans 1" class="item-img" /> Slim
+            Fit Jeans
           </td>
           <td>700</td>
           <td><span id="stock-jeans1">10</span></td>
@@ -304,7 +188,7 @@
         <tr>
           <td>
             <img src="images/polo.jpg" alt="T-shirt 3" class="item-img" />
-             Polo Shirt
+            Polo Shirt
           </td>
           <td>450</td>
           <td><span id="stock-tshirt3">10</span></td>
@@ -364,8 +248,8 @@
         <!-- Populate with Perfumes items -->
         <tr>
           <td>
-            <img src="images/parfum.jpg" alt="Perfume 1" class="item-img" /> Eau de
-            Parfum
+            <img src="images/parfum.jpg" alt="Perfume 1" class="item-img" /> Eau
+            de Parfum
           </td>
           <td>1200</td>
           <td><span id="stock-perfume1">10</span></td>
@@ -406,7 +290,7 @@
         </tr>
         <tr>
           <td>
-            <img src="images/ck.jpg" alt="Perfume 3" class="item-img" /> 
+            <img src="images/ck.jpg" alt="Perfume 3" class="item-img" />
             CK One
           </td>
           <td>800</td>
@@ -467,8 +351,8 @@
         <!-- Populate with Sandos items -->
         <tr>
           <td>
-            <img src="images/white_sando.jpg" alt="Sando 1" class="item-img" /> Plain
-            White Sando
+            <img src="images/white_sando.jpg" alt="Sando 1" class="item-img" />
+            Plain White Sando
           </td>
           <td>150</td>
           <td><span id="stock-sando1">10</span></td>
@@ -509,7 +393,8 @@
         </tr>
         <tr>
           <td>
-            <img src="images/muscle.jpg" alt="Sando 3" class="item-img" /> Muscle Tee
+            <img src="images/muscle.jpg" alt="Sando 3" class="item-img" />
+            Muscle Tee
           </td>
           <td>200</td>
           <td><span id="stock-sando3">10</span></td>
@@ -569,7 +454,8 @@
         <!-- Populate with Toys items -->
         <tr>
           <td>
-            <img src="images/bear.jpg" alt="Toy 1" class="item-img" /> Stuffed Bear
+            <img src="images/bear.jpg" alt="Toy 1" class="item-img" /> Stuffed
+            Bear
           </td>
           <td>250</td>
           <td><span id="stock-toy1">10</span></td>
@@ -589,7 +475,8 @@
         </tr>
         <tr>
           <td>
-            <img src="images/lego.jpg" alt="Toy 2" class="item-img" /> Lego Blocks Set
+            <img src="images/lego.jpg" alt="Toy 2" class="item-img" /> Lego
+            Blocks Set
           </td>
           <td>350</td>
           <td><span id="stock-toy2">10</span></td>
@@ -610,7 +497,7 @@
         <tr>
           <td>
             <img src="images/nerf.jpg" alt="Toy 3" class="item-img" />
-           Nerf Gun
+            Nerf Gun
           </td>
           <td>800</td>
           <td><span id="stock-toy3">10</span></td>
@@ -630,7 +517,8 @@
         </tr>
         <tr>
           <td>
-            <img src="images/soldier.jpg" alt="Toy 4" class="item-img" /> Toy Soldier
+            <img src="images/soldier.jpg" alt="Toy 4" class="item-img" /> Toy
+            Soldier
           </td>
           <td>600</td>
           <td><span id="stock-toy4">10</span></td>
@@ -658,6 +546,24 @@
         <!-- Selected items will be displayed here -->
       </ul>
       <p>Total Amount: <span id="total-amount">0</span> PHP</p>
+      <p>
+        Original Total Amount: <span id="original-total-amount">0</span> PHP
+      </p>
+      <p>
+        Discounted Total Amount: <span id="discounted-total-amount">0</span> PHP
+      </p>
+      <p id="discount-status">No Discount</p>
+
+      <label>Discount:</label><br />
+      <input type="radio" id="discount30" name="discount" value="30" />
+      <label for="discount30">PWD 30%</label><br />
+      <input type="radio" id="discount20" name="discount" value="20" />
+      <label for="discount20">SENIOR 20%</label><br />
+      <input type="radio" id="discount10" name="discount" value="10" />
+      <label for="discount10">STUDENT 10%</label><br />
+      <input type="radio" id="discountNone" name="discount" value="0" checked />
+      <label for="discountNone">No Discount</label><br /><br />
+
       <label for="amount-given">Amount Given (PHP):</label>
       <input
         type="number"
@@ -670,101 +576,37 @@
       Change: <span id="change">0</span> PHP
     </div>
 
+    <button onclick="openAddStocksPage()">Add Stocks</button>
+    <div id="stockList"></div>
     <!-- Closing Button -->
     <div id="closing-button">
       <button onclick="confirmClose()">Close Shopping</button>
     </div>
 
     <!-- JavaScript -->
-    <script>
-      let selectedItems = {}; // Object to store selected items and quantities
-
-      function buy(item, price) {
-        const quantityInput = document.getElementById(`quantity-${item}`);
-        const quantity = parseInt(quantityInput.value);
-        const stockElement = document.getElementById(`stock-${item}`);
-        let stock = parseInt(stockElement.textContent);
-
-        if (quantity > 0 && quantity <= stock) {
-          // Update selectedItems object with the selected item and quantity
-          if (selectedItems[item]) {
-            selectedItems[item] += quantity;
-          } else {
-            selectedItems[item] = quantity;
-          }
-
-          // Update summary
-          updateSummary();
-
-          // Calculate total amount
-          const totalAmountElement = document.getElementById("total-amount");
-          let currentTotalAmount = parseFloat(totalAmountElement.textContent);
-          currentTotalAmount += quantity * price;
-          totalAmountElement.textContent = currentTotalAmount.toFixed(2);
-
-          // Update stock
-          stock -= quantity;
-          stockElement.textContent = stock;
-
-          // Reset quantity input
-          quantityInput.value = 0;
-
-          alert(`You bought ${quantity} of ${item} at ${price} PHP each!`);
-        } else {
-          alert(`Invalid quantity. Please enter a valid amount.`);
-        }
-      }
-
-      function restock(item) {
-        const stockElement = document.getElementById(`stock-${item}`);
-        let stock = parseInt(stockElement.textContent);
-
-        // Restock 10 units
-        const restockQuantity = 10;
-        stock += restockQuantity;
-        stockElement.textContent = stock;
-
-        alert(`Restocked ${restockQuantity} of ${item}`);
-      }
-
-      function updateSummary() {
-        const summaryList = document.getElementById("selected-items");
-        summaryList.innerHTML = ""; // Clear previous items
-
-        for (const item in selectedItems) {
-          const quantity = selectedItems[item];
-          const listItem = document.createElement("li");
-          listItem.textContent = `${item}: ${quantity}`;
-          summaryList.appendChild(listItem);
-        }
-      }
-
-      function calculateChange() {
-        const totalAmount = parseFloat(
-          document.getElementById("total-amount").textContent
-        );
-        const amountGiven = parseFloat(
-          document.getElementById("amount-given").value
-        );
-
-        if (amountGiven < totalAmount) {
-          alert("Insufficient funds! Pls add more money");
-          document.getElementById("change").textContent = "Insufficient funds";
-        } else {
-          const change = amountGiven - totalAmount;
-          document.getElementById("change").textContent = change.toFixed(2);
-        }
-      }
-
-      function confirmClose() {
-        const confirmMessage = "Are you done shopping?";
-        if (confirm(confirmMessage)) {
-          alert("Thank you for shopping!");
-          window.close(); // Close the window
-        } else {
-          alert("Continue shopping!");
-        }
-      }
+    <script src="script.js">
+        const itemPrices = {
+          'jeans1': 700,
+          'jeans2': 650,
+          'jeans3': 750,
+          'jeans4': 680,
+          'tshirt1': 300,
+          'tshirt2': 350,
+          'tshirt3': 450,
+          'tshirt4': 320,
+          'perfume1': 1200,
+          'perfume2': 950,
+          'perfume3': 800,
+          'perfume4': 600,
+          'sando1': 150,
+          'sando2': 180,
+          'sando3': 200,
+          'sando4': 220,
+          'toy1': 250,
+          'toy2': 350,
+          'toy3': 800,
+          'toy4': 600
+      };
     </script>
   </body>
 </html>
