@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luzon Threads</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="#jeans">Jeans</a></li>
+        <li><a href="#tshirts">T-shirts</a></li>
+        <li><a href="#perfumes">Perfumes</a></li>
+        <li><a href="#sandos">Sandos</a></li>
+        <li><a href="#toys">Toys</a></li>
+      </ul>
+    </nav>
+
+    <!-- Store Logo and Name -->
+    <h1>
+      <img src="images/logo.png" alt="Store Logo" class="item-img" /> Luzon
+      Threads
+    </h1>
+
+    <!-- Item Lists -->
+    <table class="item-list" id="jeans">
+      <caption>
+        Jeans
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (PHP)</th>
+          <th>Stock</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate with Jeans items -->
+        <tr>
+          <td>
+            <img src="images/slimfit.jpg" alt="Jeans 1" class="item-img" /> Slim
+            Fit Jeans
+          </td>
+          <td>700</td>
+          <td><span id="stock-jeans1">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-jeans1"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('jeans1', 700)">Buy</button>
+            <button onclick="restock('jeans1')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/chino.jpg" alt="Jeans 2" class="item-img" />
+            Chino Jeans
+          </td>
+          <td>650</td>
+          <td><span id="stock-jeans2">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-jeans2"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('jeans2', 650)">Buy</button>
+            <button onclick="restock('jeans2')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/cargo.jpg" alt="Jeans 3" class="item-img" />
+            Cargo Pants
+          </td>
+          <td>750</td>
+          <td><span id="stock-jeans3">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-jeans3"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('jeans3', 750)">Buy</button>
+            <button onclick="restock('jeans3')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/wide.jpg" alt="Jeans 4" class="item-img" />
+            Wide Leg Pants
+          </td>
+          <td>680</td>
+          <td><span id="stock-jeans4">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-jeans4"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('jeans4', 680)">Buy</button>
+            <button onclick="restock('jeans4')">Restock</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- T-shirts -->
+    <table class="item-list" id="tshirts">
+      <caption>
+        T-shirts
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (PHP)</th>
+          <th>Stock</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate with T-shirts items -->
+        <tr>
+          <td>
+            <img src="images/white.jpg" alt="T-shirt 1" class="item-img" />
+            Plain White T-shirt
+          </td>
+          <td>300</td>
+          <td><span id="stock-tshirt1">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-tshirt1"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('tshirt1', 300)">Buy</button>
+            <button onclick="restock('tshirt1')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/graphic.jpg" alt="T-shirt 2" class="item-img" />
+            Graphic Print T-shirt
+          </td>
+          <td>350</td>
+          <td><span id="stock-tshirt2">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-tshirt2"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('tshirt2', 350)">Buy</button>
+            <button onclick="restock('tshirt2')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/polo.jpg" alt="T-shirt 3" class="item-img" />
+            Polo Shirt
+          </td>
+          <td>450</td>
+          <td><span id="stock-tshirt3">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-tshirt3"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('tshirt3', 450)">Buy</button>
+            <button onclick="restock('tshirt3')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/vneck.jpg" alt="T-shirt 4" class="item-img" />
+            V-neck T-shirt
+          </td>
+          <td>320</td>
+          <td><span id="stock-tshirt4">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-tshirt4"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('tshirt4', 320)">Buy</button>
+            <button onclick="restock('tshirt4')">Restock</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Perfumes -->
+    <table class="item-list" id="perfumes">
+      <caption>
+        Perfumes
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (PHP)</th>
+          <th>Stock</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate with Perfumes items -->
+        <tr>
+          <td>
+            <img src="images/parfum.jpg" alt="Perfume 1" class="item-img" /> Eau
+            de Parfum
+          </td>
+          <td>1200</td>
+          <td><span id="stock-perfume1">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-perfume1"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('perfume1', 1200)">Buy</button>
+            <button onclick="restock('perfume1')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/eros.jpg" alt="Perfume 2" class="item-img" />
+            Versace Eros
+          </td>
+          <td>950</td>
+          <td><span id="stock-perfume2">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-perfume2"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('perfume2', 950)">Buy</button>
+            <button onclick="restock('perfume2')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/ck.jpg" alt="Perfume 3" class="item-img" />
+            CK One
+          </td>
+          <td>800</td>
+          <td><span id="stock-perfume3">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-perfume3"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('perfume3', 800)">Buy</button>
+            <button onclick="restock('perfume3')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/darcy.jpg" alt="Perfume 4" class="item-img" />
+            Ian Darcy
+          </td>
+          <td>600</td>
+          <td><span id="stock-perfume4">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-perfume4"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('perfume4', 600)">Buy</button>
+            <button onclick="restock('perfume4')">Restock</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Sandos -->
+    <table class="item-list" id="sandos">
+      <caption>
+        Sandos
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (PHP)</th>
+          <th>Stock</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate with Sandos items -->
+        <tr>
+          <td>
+            <img src="images/white_sando.jpg" alt="Sando 1" class="item-img" />
+            Plain White Sando
+          </td>
+          <td>150</td>
+          <td><span id="stock-sando1">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-sando1"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('sando1', 150)">Buy</button>
+            <button onclick="restock('sando1')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/striped.jpg" alt="Sando 2" class="item-img" />
+            Stripped Tank Top
+          </td>
+          <td>180</td>
+          <td><span id="stock-sando2">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-sando2"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('sando2', 180)">Buy</button>
+            <button onclick="restock('sando2')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/muscle.jpg" alt="Sando 3" class="item-img" />
+            Muscle Tee
+          </td>
+          <td>200</td>
+          <td><span id="stock-sando3">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-sando3"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('sando3', 200)">Buy</button>
+            <button onclick="restock('sando3')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/sport.jpg" alt="Sando 4" class="item-img" /> Sporty
+            Tank Top
+          </td>
+          <td>220</td>
+          <td><span id="stock-sando4">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-sando4"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('sando4', 220)">Buy</button>
+            <button onclick="restock('sando4')">Restock</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Toys -->
+    <table class="item-list" id="toys">
+      <caption>
+        Toys
+      </caption>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price (PHP)</th>
+          <th>Stock</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate with Toys items -->
+        <tr>
+          <td>
+            <img src="images/bear.jpg" alt="Toy 1" class="item-img" /> Stuffed
+            Bear
+          </td>
+          <td>250</td>
+          <td><span id="stock-toy1">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-toy1"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('toy1', 250)">Buy</button>
+            <button onclick="restock('toy1')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/lego.jpg" alt="Toy 2" class="item-img" /> Lego
+            Blocks Set
+          </td>
+          <td>350</td>
+          <td><span id="stock-toy2">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-toy2"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('toy2', 350)">Buy</button>
+            <button onclick="restock('toy2')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/nerf.jpg" alt="Toy 3" class="item-img" />
+            Nerf Gun
+          </td>
+          <td>800</td>
+          <td><span id="stock-toy3">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-toy3"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('toy3', 800)">Buy</button>
+            <button onclick="restock('toy3')">Restock</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img src="images/soldier.jpg" alt="Toy 4" class="item-img" /> Toy
+            Soldier
+          </td>
+          <td>600</td>
+          <td><span id="stock-toy4">10</span></td>
+          <td>
+            <input
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+              id="quantity-toy4"
+            />
+          </td>
+          <td class="button-container">
+            <button onclick="buy('toy4', 600)">Buy</button>
+            <button onclick="restock('toy4')">Restock</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Summary -->
+    <div id="summary">
+      <h2>Selected Items:</h2>
+      <ul id="selected-items">
+        <!-- Selected items will be displayed here -->
+      </ul>
+      <p>Total Amount: <span id="total-amount">0</span> PHP</p>
+      <p>
+        Original Total Amount: <span id="original-total-amount">0</span> PHP
+      </p>
+      <p>
+        Discounted Total Amount: <span id="discounted-total-amount">0</span> PHP
+      </p>
+      <p id="discount-status">No Discount</p>
+
+      <label>Discount:</label><br />
+      <input type="radio" id="discount30" name="discount" value="30" />
+      <label for="discount30">PWD 30%</label><br />
+      <input type="radio" id="discount20" name="discount" value="20" />
+      <label for="discount20">SENIOR 20%</label><br />
+      <input type="radio" id="discount10" name="discount" value="10" />
+      <label for="discount10">STUDENT 10%</label><br />
+      <input type="radio" id="discountNone" name="discount" value="0" checked />
+      <label for="discountNone">No Discount</label><br /><br />
+
+      <label for="amount-given">Amount Given (PHP):</label>
+      <input
+        type="number"
+        id="amount-given"
+        min="0"
+        step="0.01"
+        onchange="calculateChange()"
+      />
+      <br />
+      Change: <span id="change">0</span> PHP
+    </div>
+
+    <button onclick="openAddStocksPage()">Add Stocks</button>
+    <div id="stockList"></div>
+    <!-- Closing Button -->
+    <div id="closing-button">
+      <button onclick="confirmClose()">Close Shopping</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js">
+        const itemPrices = {
+          'jeans1': 700,
+          'jeans2': 650,
+          'jeans3': 750,
+          'jeans4': 680,
+          'tshirt1': 300,
+          'tshirt2': 350,
+          'tshirt3': 450,
+          'tshirt4': 320,
+          'perfume1': 1200,
+          'perfume2': 950,
+          'perfume3': 800,
+          'perfume4': 600,
+          'sando1': 150,
+          'sando2': 180,
+          'sando3': 200,
+          'sando4': 220,
+          'toy1': 250,
+          'toy2': 350,
+          'toy3': 800,
+          'toy4': 600
+      };
+    </script>
+  </body>
+</html>
